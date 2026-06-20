@@ -53,17 +53,8 @@ The Congratulations Screen is displayed when the counter reaches **10**.
 # Project Structure
 
 
-Assets/
-├── Scenes/
-│   ├── WelcomeScene
-│   ├── CounterScene
-│   └── CongratulationsScene
-│
-├── Scripts/
-│   ├── WelcomeSceneLoader.cs
-│   ├── CounterSceneLoader.cs
-│   └── CongratulationsSceneLoader.cs
-│
-└── AppLogo/
-    └── Applogo.png
+Assets/ Scenes/ *WelcomeScene *CounterScene *CongratulationsScene
+Assets/ Scripts/ *WelcomeSceneLoader.cs *CounterSceneLoader.cs *CongratulationsSceneLoader.cs
+Assets/ AppLogo/ *Applogo.png
+
 
