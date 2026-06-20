@@ -4,7 +4,7 @@
 
 The application starts on the Welcome Screen, where the user is prompted to enter their name.
 
-* Users must enter a valid name (empty or whitespace-only input is not allowed).
+* Users must enter a valid name.
 * The entered name is saved using Unity's PlayerPrefs.
 * If a username already exists from a previous session, the Welcome Screen is skipped automatically and the user is taken directly to the Counter Screen.
 
@@ -17,7 +17,7 @@ The Counter Screen displays a persistent counter value.
 * The counter starts at 0 for new users.
 * Users can increase the value using the +1 button.
 * Users can decrease the value using the −1 button.
-* The counter value is saved using `PlayerPrefs` and persists between application sessions.
+* The counter value is saved using PlayerPrefs and persists between application sessions.
 * When the counter reaches 10, the application automatically navigates to the Congratulations Screen.
 * If the application is reopened while the counter is already 10, the Congratulations Screen is shown automatically.
 
@@ -53,8 +53,8 @@ The Congratulations Screen is displayed when the counter reaches **10**.
 # Project Structure
 
 
-Assets/ Scenes/ *WelcomeScene *CounterScene *CongratulationsScene
-Assets/ Scripts/ *WelcomeSceneLoader.cs *CounterSceneLoader.cs *CongratulationsSceneLoader.cs
+Assets/ Scenes/ *WelcomeScene *CounterScene *CongratulationsScene <br>
+Assets/ Scripts/ *WelcomeSceneLoader.cs *CounterSceneLoader.cs *CongratulationsSceneLoader.cs <br>
 Assets/ AppLogo/ *Applogo.png
 
 
