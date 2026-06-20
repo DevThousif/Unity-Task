@@ -1,63 +1,69 @@
-App Flow
+# App Flow
 
-Screen 1 — Welcome Screen
+## Welcome Screen
 
+The application starts on the Welcome Screen, where the user is prompted to enter their name.
 
-User enters their name and presses Continue
-Name is validated (cannot be empty or whitespace)
-Name is saved using PlayerPrefs
-If a name already exists from a previous session, this screen is skipped automatically
+* Users must enter a valid name (empty or whitespace-only input is not allowed).
+* The entered name is saved using Unity's PlayerPrefs.
+* If a username already exists from a previous session, the Welcome Screen is skipped automatically and the user is taken directly to the Counter Screen.
 
+---
 
-Screen 2 — Counter Screen
+## Counter Screen
 
+The Counter Screen displays a persistent counter value.
 
-Displays the current counter value (starts at 0)
-+1 and −1 buttons to increment or decrement
-Counter value persists between sessions
-Automatically navigates to the Congratulations Screen when the counter reaches 10
+* The counter starts at 0 for new users.
+* Users can increase the value using the +1 button.
+* Users can decrease the value using the −1 button.
+* The counter value is saved using `PlayerPrefs` and persists between application sessions.
+* When the counter reaches 10, the application automatically navigates to the Congratulations Screen.
+* If the application is reopened while the counter is already 10, the Congratulations Screen is shown automatically.
 
+---
 
-Screen 3 — Congratulations Screen
+## Congratulations Screen
 
+The Congratulations Screen is displayed when the counter reaches **10**.
 
-Displays a congratulations message with the saved username
-Includes a Reset button (for debugging) that clears all saved data and returns to the Welcome Screen
+* A personalized congratulations message is shown using the saved username.
+* A Reset button is included for testing and debugging purposes.
+* Pressing Reset clears all saved data and returns the user to the Welcome Screen.
 
+# Features
 
+* Persistent data storage using PlayerPrefs
+* Username input validation
+* Automatic Welcome Screen bypass for returning users
+* Persistent counter system
+* Automatic navigation to the Congratulations Screen at a counter value of 10
+* Personalized congratulations message
+* Reset functionality for testing and debugging
+* Organized scene and folder structure
+* Edge-case handling for saved progress and application restarts
 
-Features
+# Tech Stack
 
+* **Engine:** Unity
+* **Language:** C#
+* **UI Framework:** Unity UI
+* **Text Rendering:** TextMeshPro
 
-Persistent data storage using PlayerPrefs
-Input validation on name field
-Auto-skip Welcome Screen if user data already exists
-Auto-navigate to Congratulations Screen when counter hits 10
-Clean scene and folder structure
-Edge case handling (e.g. app reopened with counter already at 10)
+# Project Structure
 
-
-
-Tech Stack
-
-
-Engine: Unity
-Language: C#
-UI: Unity UI + TextMeshPro
-
-
-
-Project Structure
 
 Assets/
 ├── Scenes/
 │   ├── WelcomeScene
 │   ├── CounterScene
 │   └── CongratulationsScene
+│
 ├── Scripts/
 │   ├── WelcomeSceneLoader.cs
 │   ├── CounterSceneLoader.cs
 │   └── CongratulationsSceneLoader.cs
-├── AppLogo/
-│   ├── Applogo.png
+│
+└── AppLogo/
+    └── Applogo.png
 
